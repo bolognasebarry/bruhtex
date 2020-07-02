@@ -19,25 +19,26 @@
     Thus $d$ is the largest integer for which $d|a$ and $d|b$
 \end{definition}
 
-If $\text{gcd}\left(a,b\right) = 1$ then $a$ and $b$ have no common factors other than $\pm 1$ and we call $a$ and $b$ coprime or relatively prime.
+If $\text{gcd}\left(a,b\right) = 1$ then $a$ and $b$ have no common factors other than $\pm 1$ and we call $a$ and $b$ co-prime or relatively prime.
 
 \textbf{Fact}: If $a$ and $b$ are integers with $b\neq 0$ and if $q$ and $r$ are integers such that $$a = bq + r$$ then $$\text{gcd}\left(a,b\right) = \text{gcd}\left(b,r\right)$$
 
 \begin{definition}
     The Euclidean Algorithm: to find $\text{gcd}\left(a,b\right)$ where $a,b\in\mathbb Z$ and $a\geq b>0$,
     \begin{itemize}
-        \item write $a=bq+r$, as in the quotient-remainder theorm
+        \item write $a=bq+r$, as in the quotient-remainder theorem
         \item if $r=0$, then terminate with $\text{gcd}\left(a,b\right)=b$
         \item otherwise replace $\left(a,b\right)$ with $\left(b,r\right)$ and repeat
     \end{itemize}
 \end{definition}
 
 \begin{definition}
-    For nonzero integers $a,b\in\mathbb Z$, the \underline{lowest common multiple} of $a$ and $b$ is the smallest positive integer $n$ for which $a|n$ and $b|n$. We write this as $\text{lcm}\left(a,b\right)$
+    For non-zero integers $a,b\in\mathbb Z$, the \underline{lowest common multiple} of $a$ and $b$ is the smallest positive integer $n$ for which $a|n$ and $b|n$. We write this as $\text{lcm}\left(a,b\right)$
 \end{definition}
 
 \textbf{Fact}: suppose $a,b\in\mathbb{Z}$ where $a\geq b > 0$. Then $$\text{gcd}\left(a,b\right)\cdot\text{lcm}\left(a,b\right) = a\cdot b$$
 
+\newpage
 \subsection{Sequences}
 \begin{definition}
     A \underline{sequence} is an ordered list of elements. It can be infinite or finite. Each individual element is called a \underline{term}. We often denote the terms of sequences by lower case letters with subscripts.
@@ -59,7 +60,7 @@ Different notations are used to denote such a sequence, such as $$\left\{2^k\rig
 \end{example}
 
 \begin{definition}
-    An \underline{alternating sequence} is a sequence in which the terms alternate between postive and negative, such as the previous example.
+    An \underline{alternating sequence} is a sequence in which the terms alternate between positive and negative, such as the previous example.
 \end{definition}
 
 It is often useful to find a general term from initial terms.
@@ -91,7 +92,7 @@ We use greek capital Pi $\Pi$ to indicate a product. If $m,n\in\mathbb Z$ and $m
 For $n\in\mathbb Z^+$, we define $n!$ (read ``$n$ factorial'') to be $$n! = n(n-1)(n-2)\cdot\dots\cdot 3\cdot 2\cdot 1 = \prod_{i=1}^n$$ also, $0!=1$
 
 \subsection{Properties of Summation and Product Notation}
-If $a_m,\, a_{m+1},\, a_{m+2},\,\dots$ and $b_m,\, b_{m+1},\, b_{m+2},\,\dots$ are sequences of real numbers, and $c$ is any real number, then, for any interger $n\geq m$, the following hold.
+If $a_m,\, a_{m+1},\, a_{m+2},\,\dots$ and $b_m,\, b_{m+1},\, b_{m+2},\,\dots$ are sequences of real numbers, and $c$ is any real number, then, for any integer $n\geq m$, the following hold.
 
 \begin{enumerate}
     \item $\displaystyle\sum_{i=m}^n a_i \pm \sum_{i=m}^n b_1 = \sum_{i=m}^n a_i \pm b_i$
@@ -99,6 +100,7 @@ If $a_m,\, a_{m+1},\, a_{m+2},\,\dots$ and $b_m,\, b_{m+1},\, b_{m+2},\,\dots$ a
     \item $\displaystyle\left(\prod_{i=m}^n a_i\right)\left(\prod_{i=m}^n b_1\right) = \prod_{i=m}^n a_ib_i$
 \end{enumerate}
 
+\newpage
 \subsection{Mathematical Induction}
 \begin{definition}
     The Principle of Mathematical Induction.
@@ -148,10 +150,10 @@ We can now use this idea in a formal proof.
 
 	Therefore, by strong induction, it follows that $P(n)$ is true for every integer $n\geq 8$.
 \end{proof}
-
+\newpage
 \subsubsection{Well Ordering Principle}
 \begin{definition}
 	The \emph{Well Ordering Principle} for the integers.
 
-	If $S$ is a non-empty set of integers, all of whihc are greater than some fixed integer, then $S$ has a least element.
+	If $S$ is a non-empty set of integers, all of which are greater than some fixed integer, then $S$ has a least element.
 \end{definition}

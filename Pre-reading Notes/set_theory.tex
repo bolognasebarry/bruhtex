@@ -69,7 +69,7 @@ If $|S| = n$, then $|\mathcal{P}(S)| = 2^n$
 \end{definition}
 
 \begin{definition}
-    A finite or infinite collection of nonempty sets $\left\{A_1,\,A_2,\,A_3\,\dots\right\}$ is a \underline{partition} of a set $A$ if and only if $A$ is the union of all the $A_i$ and $A_1,\,A_2,\,A_3,\,\dots$ are mutually disjoint.
+    A finite or infinite collection of non-empty sets $\left\{A_1,\,A_2,\,A_3\,\dots\right\}$ is a \underline{partition} of a set $A$ if and only if $A$ is the union of all the $A_i$ and $A_1,\,A_2,\,A_3,\,\dots$ are mutually disjoint.
 \end{definition}
 
 \begin{definition}
@@ -144,7 +144,7 @@ The function $f:\mathbb Z^+ \rightarrow \mathbb Z$ defined by $$f(n) = \frac{n}{
 
 \subsection{Counting Sets}
 \begin{definition}
-    A set is called \underline{countably infinite} if and only if it has the same cardinality as the set of postive integers $\mathbb Z^+$
+    A set is called \underline{countably infinite} if and only if it has the same cardinality as the set of positive integers $\mathbb Z^+$
 \end{definition}
 
 \begin{example}
@@ -167,7 +167,7 @@ Corollary: any set with an uncountable subset is uncountable.
 Note: every real number between $0$ and $1$ has a unique decimal representation except that $$0.199999\dots = 0.2000\dots$$ and for such numbers, we agree to take the one that ends in all $0$'s.
 
 \begin{proof}
-    Suppose the theorm is false.
+    Suppose the theorem is false.
     Then $\left\{x\in\mathbb R | 0 < x < 1\right\}$ is countable, so the decimal representations of these numbers can be written in a list.
     \begin{equation*}
             \begin{array}{c}
@@ -244,7 +244,7 @@ OR
 This can be much easier than finding a bijection.
 
 \begin{example}
-    Show $|\mathbb Z^+| = |\mathbb Q^+|$ using the Schroder-Bernstein theorm.
+    Show $|\mathbb Z^+| = |\mathbb Q^+|$ using the Schroder-Bernstein theorem.
 
     \begin{enumerate}
         \item The function $f:\mathbb Z^+ \rightarrow Q^+$ is defined by $f(n) = n\,\forall n\in\mathbb Z^+$ is injective $\therefore |\mathbb Z^+| \leq |\mathbb Q^+|$
@@ -265,8 +265,9 @@ This can be much easier than finding a bijection.
     If $R$ is a binary relation from $A$ to $B$, the the \underline{inverse relation} $R^{-1}$ is defined from $B$ to $A$ by $$R^{-1} = \left\{(b,a)\in B\times A | (a,b)\in R\right\}$$
 
     So for all $a\in A$ and $b\in B$, $$(b,a)\in R^{-1} \text{ if and only if }(a,b)\in R$$
-\end{definition}\\\\
+\end{definition}
 A relation on a set A, is a relation from A to A.\\
+\newpage
 \begin{definition}
     Let R be a relation on a set A.\\
     \begin{enumerate}
@@ -274,16 +275,16 @@ A relation on a set A, is a relation from A to A.\\
         \item R is symmetric if and only if \(\forall x,y \in A\) if \(xRy\) then \(yRx\)
         \item R is transitive if and only if \(\forall x,y,z \in A\) if \(xRy\) and \(yRz\), then \(xRz\)
     \end{enumerate}
-\end{definition}\\\\
+\end{definition}
 Note that a relation R on a set A is symmetric if and only if \(R = r^{-1}\).\\
 \begin{definition}
     R is an equivalence relation if R is symmetric, reflexive and transitive.
-\end{definition}\\
+\end{definition}
 \begin{definition}
     Let R be an equivalence relation on a set A and let \(a \in A\).\\
     The equivalence class of a is \[[a] = \{x\in A | xRa\}\]
     So, \(\forall x\in A\quad x\in [a] \iff xRa\)
-\end{definition}\\
+\end{definition}
 \begin{theorm}
     If R is an equivalence relation on a set A and \(a, b \in A\) satisfy \(aRb\), then \([a] = [b]\).
 \end{theorm}
@@ -291,7 +292,7 @@ Note that a relation R on a set A is symmetric if and only if \(R = r^{-1}\).\\
     If R is an equivalence relation on a set A and \(a, b \in A\) and \([a] \cap [b] \neq \emptyset\) then \([a] = [b]\).
 \end{theorm}
 \begin{theorm}
-    If R is an equivalence relation on a set A then the set of equivalence classes of R forms a partition of A. That is, the union of all the classes is A and the intersection of any two distince classes is empty.\\
+    If R is an equivalence relation on a set A then the set of equivalence classes of R forms a partition of A. That is, the union of all the classes is A and the intersection of any two distinct classes is empty.\\
     Given a partition of a set A, the binary relation R induced by the partition is defined:\\
     for all \(x, y \in A\), \(xRy \iff\) there is a set in the partition containing both x and y.
 \end{theorm}
@@ -300,11 +301,11 @@ Note that a relation R on a set A is symmetric if and only if \(R = r^{-1}\).\\
 \end{theorm}
 \begin{definition}
     A relation R on a set A is antisymmetric if and only if \(\forall a, b \in A\) if \(aRb\) and \(bRa\) then \(a=b\)
-\end{definition}\\
+\end{definition}
 \begin{definition}
-    Let R be a relation on a set A. Elements \(a, b\in A\) are comparable if and only if \(aRb\) or \(bRa\). Otherwise, a and b are noncomparable.
-\end{definition}\\
+    Let R be a relation on a set A. Elements \(a, b\in A\) are comparable if and only if \(aRb\) or \(bRa\). Otherwise, a and b are non-comparable.
+\end{definition}
 \begin{definition}
     Let R be a relation on a set A. R is a total order relation if and only if, R is a partial order relation such that all elements are comparable.\\
-    That is, R is a total order relaton if and only if: Reflexive, antisymmetric, transitive and \(\forall a, b \in A\) either \(aRb\) or \(bRa\).
-\end{definition}\\
+    That is, R is a total order relation if and only if: Reflexive, antisymmetric, transitive and \(\forall a, b \in A\) either \(aRb\) or \(bRa\).
+\end{definition}

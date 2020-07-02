@@ -1,10 +1,10 @@
 \section{Counting}
 \begin{example}
-    Suppose a restaurant has 5 types of cake and 2 types of icecream to select for dessert.
+    Suppose a restaurant has 5 types of cake and 2 types of ice cream to select for dessert.
     \begin{enumerate}
-        \item How many choices for dessert are there if you select one cake and one icecream?
-        There are $5\cdot 2 = 10$ choices. \emph{This is a sequence of tasks - first, choose a dessert, then, choose an icecream}.
-        \item How many choices for dessert are there if you select either one cake or one icecream, but not both?
+        \item How many choices for dessert are there if you select one cake and one ice cream?
+        There are $5\cdot 2 = 10$ choices. \emph{This is a sequence of tasks - first, choose a dessert, then, choose an ice cream}.
+        \item How many choices for dessert are there if you select either one cake or one ice cream, but not both?
         There are $5 + 2 = 7$ choices. \emph{These are two distinct cases}.
     \end{enumerate}
 \end{example}
@@ -59,7 +59,7 @@
     \end{enumerate}
 \end{example}
 
-Let $n$ and $r$ to be nonnegative integers.
+Let $n$ and $r$ to be non-negative integers.
 
 Problem: \emph{Select $r$ elements from a set containing $n$ elements. How many ways are there to do the selection?}
 
@@ -72,9 +72,11 @@ The answer depends on:
 Case where order matters and repetition is allowed.
 
 \begin{example}
-    We have a new ATM card and need to select a PIN. We may choose four digits from the set $\{0,\,1,\,2,\,3,\,4,\,5,\,6,\,7,\,8,\,9\}$. Order matters, and we may repeat. How many PINs are there?
+    We have a new ATM card and need to select a PIN. We may choose four digits from the set 
+    \[\{0,\,1,\,2,\,3,\,4,\,5,\,6,\,7,\,8,\,9\}\]
+    Order matters, and we may repeat. How many PINs are there?
 
-    In each of the four selections we have 10 choices, and hence there are $10^4$ possiblities.
+    In each of the four selections we have 10 choices, and hence there are $10^4$ possibilities.
 \end{example}
 
 Fact: the number of selections of $r$ elements from a set containing $n$ elements where order matters and repetition is allowed is $n^r$.
@@ -86,9 +88,10 @@ Case where order matters, and there is no repetition.
 \end{example}
 
 \begin{definition}
-    Let $n$ and $r$ be nonnegative integers with $r\leq n$. An \underline{r-permutation} of a set of $n$ elements is an ordered selection of $r$ elements taken from the set of $n$ elements. The number of r-permutations of a set of $n$ elements is denoted $P(n,r)$ or $nPr$.
+    Let $n$ and $r$ be non-negative integers with $r\leq n$. An \underline{r-permutation} of a set of $n$ elements is an ordered selection of $r$ elements taken from the set of $n$ elements. The number of r-permutations of a set of $n$ elements is denoted $P(n,r)$ or $nPr$.
 \end{definition}
 
+\newpage
 \begin{theorm}
     If $n,\,r\in\mathbb Z$ and $1\leq r\leq n$, then $$P(n,\,r) = n(n-1)(n-2)\dots (n-r+1) = \frac{n!}{\left(n-r\right)!}$$
 \end{theorm}
@@ -104,11 +107,11 @@ Case where order doesn't matter, and repetition is not allowed.
 \end{example}
 
 \begin{definition}
-    Let $n$ and $r$ be nonnegative integers with $r\leq n$. An \underline{r-combination} of a set of $n$ elements is a subset of $r$ of the $n$ elements. The number of $r$-combinations of a set of $n$ elements is denotes $C(n,r)$ or $nCr$ or, more commonly, $\left(^n_r\right)$ which is read ``$n$ choose $r$''.
+    Let $n$ and $r$ be non-negative integers with $r\leq n$. An \underline{r-combination} of a set of $n$ elements is a subset of $r$ of the $n$ elements. The number of $r$-combinations of a set of $n$ elements is denotes $C(n,r)$ or $nCr$ or, more commonly, $\left(^n_r\right)$ which is read ``$n$ choose $r$''.
 \end{definition}
 
 \begin{theorm}
-    If $n$ and $r$ are nonnegative integers and $r\leq n$, then $$\left(^n_r\right) = \frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}$$
+    If $n$ and $r$ are non-negative integers and $r\leq n$, then $$\left(^n_r\right) = \frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}$$
 \end{theorm}
 
 Case where order does not matter, and repetition is allowed.
@@ -121,6 +124,7 @@ Case where order does not matter, and repetition is allowed.
     Answer = $120$.
 \end{example}
 
+\newpage
 \begin{example}
     How many permutations of the letters ``ALFALFA'' are there?
 
@@ -134,9 +138,9 @@ Case where order does not matter, and repetition is allowed.
     Answer: $$\left(^7_3\right) \cdot \left(^4_2\right) \cdot 1 = 35 \cdot 6 = 210$$ note the $1$ is really $\left(^2_2\right) = 1$
 
 
-    Method (2). if the letters were distinct, $$A_1 A_2 A_3 F_1 F_2 L_1 L_2$$ there would be $7! = 5040$ possiblities. Now, make the 3 A's indistinguishable. We have counted $$A_1 F_1 F_2 L_2 L_1 A_2 A_3$$ and $$A_2 F_1 F_2 L_2 L_1 A_1 A_3$$ as different solutions, so we have overcounted by $3! = 6$ times. Thus, $\frac{5040}{6} = 840$ possible solutions.
+    Method (2). if the letters were distinct, $$A_1 A_2 A_3 F_1 F_2 L_1 L_2$$ there would be $7! = 5040$ possiblities. Now, make the 3 A's indistinguishable. We have counted $$A_1 F_1 F_2 L_2 L_1 A_2 A_3$$ and $$A_2 F_1 F_2 L_2 L_1 A_1 A_3$$ as different solutions, so we have over counted by $3! = 6$ times. Thus, $\frac{5040}{6} = 840$ possible solutions.
 
-    Now make the 2 F's indistinguishable: we have overcounted by $2$ times, so we have $\frac{840}{2!} = 420$ possible solutions. Finally, make the 2 L's indistinguishable: we have overcounted by $2!$ times, so we have $\frac{420}{2!} = 210$ possible solutions.
+    Now make the 2 F's indistinguishable: we have over counted by $2$ times, so we have $\frac{840}{2!} = 420$ possible solutions. Finally, make the 2 L's indistinguishable: we have over counted by $2!$ times, so we have $\frac{420}{2!} = 210$ possible solutions.
 \end{example}
 
 \begin{theorm}
@@ -155,6 +159,7 @@ Case where order does not matter, and repetition is allowed.
 \end{theorm}
 
 More generally,
+\newpage
 \begin{theorm}
     For any finite sets $A$ and $B$, $|A\cup B| = |A|+|B| - |A\cap B|$
 \end{theorm}
@@ -192,9 +197,9 @@ The \underline{contrapositive} of the pigeonhole principle is: Suppose you have 
 
     pigeons = people, pigeonholes = initials.
 
-    There are $26\cdot 26 = 676$ possible options for first and last initials. Since $680 > 676$, the pigeonhole princple implies at least 2 people must have the same intials.
+    There are $26\cdot 26 = 676$ possible options for first and last initials. Since $680 > 676$, the pigeonhole principle implies at least 2 people must have the same initials.
 \end{example}
-
+\newpage
 \begin{definition}
     \underline{The generalised pigeonhole principle}
 
