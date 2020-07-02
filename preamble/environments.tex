@@ -1,0 +1,239 @@
+% \mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+
+% THEOREM
+\definecolor{purp}{RGB}{255,0,255}
+\newcounter{theo}[section]\setcounter{theo}{0}
+%\renewcommand{\thetheo}{\arabic{section}.\arabic{theo}}
+\newenvironment{theo}[2][]{%
+%\refstepcounter{theo}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=purp!40]
+{\strut Theorem~\thetheo};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=purp!40]
+{\strut Theorem: ~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=purp!40,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+% To use this, \begin{theo}[bruh theorem]{}
+
+
+
+% DEFINITION
+\newcounter{defi}[section] \setcounter{defi}{0}
+\renewcommand{\thedefi}{\arabic{section}.\arabic{defi}}
+\newenvironment{definition}[2][]{%
+\refstepcounter{defi}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=yellow!40]
+{\strut Definition~\thedefi};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=yellow!40]
+{\strut Definition:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=yellow!40,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+
+
+
+% LEMMMA
+\newcounter{lem}[section]\setcounter{lem}{0}
+\renewcommand{\thelem}{\arabic{section}.\arabic{lem}}
+\newenvironment{lem}[2][]{%
+\refstepcounter{lem}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=blue!40]
+{\strut Lemma~\thelem};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=blue!40]
+{\strut Lemma:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=blue!40,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+% To use this, \begin{lem}[bernouli ineq]{}
+
+
+% EXAMPLE
+\newcounter{exam}[section] \setcounter{exam}{0}
+\renewcommand{\theexam}{\arabic{section}.\arabic{exam}}
+\newenvironment{example}[2][]{%
+\refstepcounter{exam}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=orange!40]
+{\strut Example~\theexam};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=orange!40]
+{\strut Example:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=orange!40,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+
+% PROPOSITION
+\newcounter{prop}[section] \setcounter{prop}{0}
+\renewcommand{\theprop}{\arabic{section}.\arabic{prop}}
+\newenvironment{proposition}[2][]{%
+\refstepcounter{prop}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=green!40]
+{\strut Proposition~\theprop};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=green!40]
+{\strut Proposition:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=green!40,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+
+% NOTE
+\newenvironment{note}%
+{\begin{quote}\textbf{Note}:}%
+{\end{quote}}
+
+
+% OBSERVATION
+\newenvironment{observation}%
+{\begin{quote}\textbf{Obs}:}%
+{\end{quote}}
+
+% TOOL
+\newenvironment{tool}%
+{\begin{quote}\textbf{Tool}:}%
+{\end{quote}}
+
+% FACT
+\newenvironment{fact}%
+{\begin{quote}\textbf{Fact}:}%
+{\end{quote}}
+
+% IDEA
+\newenvironment{idea}%
+{\begin{quote}\textbf{Idea}:}%
+{\end{quote}}
+
+% Corollary
+\newenvironment{corollary}%
+{\begin{quote}\textbf{Corollary}:}%
+{\end{quote}}
+
+% Question
+\newenvironment{question}%
+{\begin{quote}\textbf{Q}:}%
+{\end{quote}}
+
+% Remark
+\newenvironment{remark}%
+{\begin{quote}\textbf{Rmk}:}%
+{\end{quote}}
+
+% Notation
+\newenvironment{notation}%
+{\begin{quote}\textbf{Notation}:}%
+{\end{quote}}
+
+
+%quality of life
+
+\newcommand{\Lim}{\displaystyle\lim}
+\newcommand{\integral}{\displaystyle\int}
+\sloppy
+\title{1071 Final Theorem List}
+\author{Ben Kruger}
+
+%Proof
+
+\newenvironment{prf}[1][]{%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=red!50]
+{\strut Proof};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=red!50]
+{\strut Proof:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=red!50,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+}{\qed\end{mdframed}}
+
+% To use this, \begin{prf}{}
+
+    % DERIVATION
+\newcounter{deri}[section] \setcounter{deri}{0}
+\renewcommand{\thederi}{\arabic{section}.\arabic{deri}}
+\newenvironment{derivation}[2][]{%
+\refstepcounter{deri}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=orange!40]
+{\strut Derivation~\thederi};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=orange!40]
+{\strut Derivation:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=orange!40,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
